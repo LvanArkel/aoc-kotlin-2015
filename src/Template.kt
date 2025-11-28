@@ -1,3 +1,5 @@
+import kotlin.test.assertEquals
+
 typealias Input = List<String>
 
 fun main() {
@@ -10,11 +12,11 @@ fun main() {
     }
 
     // Test if implementation meets criteria from the description, like:
-    check(part1(listOf("test_input")) == 1)
+    assertEquals(1, part1(listOf("test_input")))
 
     // Or read a large test input from the `src/Day01_test.txt` file:
     val testInput = readInputLines("Day01_test")
-    check(part1(testInput) == 1)
+    assertEquals(1, part1(testInput))
 
     // Read the input from the `src/Day01.txt` file.
     val input = readInputLines("Day01")
