@@ -1,9 +1,11 @@
+typealias Input = List<String>
+
 fun main() {
-    fun part1(input: List<String>): Int {
+    fun part1(input: Input): Int {
         return input.size
     }
 
-    fun part2(input: List<String>): Int {
+    fun part2(input: Input): Int {
         return input.size
     }
 
@@ -11,11 +13,11 @@ fun main() {
     check(part1(listOf("test_input")) == 1)
 
     // Or read a large test input from the `src/Day01_test.txt` file:
-    val testInput = readInput("Day01_test")
+    val testInput = readInputLines("Day01_test")
     check(part1(testInput) == 1)
 
     // Read the input from the `src/Day01.txt` file.
-    val input = readInput("Day01")
-    part1(input).println()
-    part2(input).println()
+    val input = readInputLines("Day01")
+    println("Part 1: ${part1(input)}")
+    println("Part 2: ${part2(input)}")
 }
