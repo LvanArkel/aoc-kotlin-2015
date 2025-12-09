@@ -55,7 +55,7 @@ fun main() {
 
     // Or read a large test input from the `src/Day01_test.txt` file:
 //    val testInput = readInputLines("Day03_test")
-//    assertEquals(1, part1(testInput))
+//    assertEquals(1, template.part1(testInput))
 
     // Read the input from the `src/Day01.txt` file.
     val input = readInput("Day03")
