@@ -18,7 +18,7 @@ fun part2(input: Input): Int {
 }
 
 fun main() {
-    val testInput = "FOO"
+    val testInput = """FOO"""
     val parsed = parse(testInput)
 
     assertEquals(-1, part1(parsed))
