@@ -6,7 +6,7 @@ import kotlin.test.assertEquals
 typealias Input = List<String>
 
 fun parse(raw: String): Input {
-    return raw.lines()
+    return raw.lines().filter(String::isNotEmpty)
 }
 
 fun part1(input: Input): Int {
