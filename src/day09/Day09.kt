@@ -1,5 +1,6 @@
 package day09
 
+import permutations
 import readInput
 import kotlin.test.assertEquals
 
@@ -17,19 +18,6 @@ fun parse(raw: String): Input {
         locations.addAll(listOf(a, b))
     }
     return locations.toList() to result
-}
-
-fun permutations(locations: List<String>): Sequence<List<String>> = sequence {
-    for (head in locations) {
-        val tail = locations - head
-        if (tail.isEmpty()) {
-            yield(listOf(head))
-        } else {
-            for (subsequence in permutations(tail)) {
-                yield(listOf(head) + subsequence)
-            }
-        }
-    }
 }
 
 fun part1(input: Input): Int {

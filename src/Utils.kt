@@ -20,3 +20,15 @@ fun String.md5() = BigInteger(1, MessageDigest.getInstance("MD5").digest(toByteA
     .toString(16)
     .padStart(32, '0')
 
+fun permutations(values: List<String>): Sequence<List<String>> = sequence {
+    for (head in values) {
+        val tail = values - head
+        if (tail.isEmpty()) {
+            yield(listOf(head))
+        } else {
+            for (subsequence in permutations(tail)) {
+                yield(listOf(head) + subsequence)
+            }
+        }
+    }
+}
