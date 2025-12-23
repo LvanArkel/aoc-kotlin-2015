@@ -12,11 +12,11 @@ fun parse(raw: String): Input {
 }
 
 fun part1(input: Input): Int {
-    return input.size
+    return 0
 }
 
 fun part2(input: Input): Int {
-    return input.size
+    return 0
 }
 
 fun main() {
