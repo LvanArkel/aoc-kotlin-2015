@@ -4,6 +4,8 @@ import org.junit.jupiter.api.Nested
 import org.junit.jupiter.api.Test
 import readInput
 import kotlin.test.assertEquals
+import kotlin.time.Clock
+import kotlin.time.Instant
 
 typealias Input = List<String>
 
@@ -21,9 +23,16 @@ fun part2(input: Input): Int {
 
 fun main() {
     val input = parse(readInput("Day01"))
-    println("Part 1: ${part1(input)}")
 
-    println("Part 2: ${part2(input)}")
+    val start1 = Clock.System.now()
+    val part1 = part1(input)
+    val end1= Clock.System.now()
+    println("Part 1: $part1 in (${end1 - start1} sec)")
+
+    val start2 = Clock.System.now()
+    val part2 = part2(input)
+    val end2= Clock.System.now()
+    println("Part 2: $part2 in (${end2 - start2} sec)")
 }
 
 class Tests {
