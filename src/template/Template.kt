@@ -5,7 +5,6 @@ import org.junit.jupiter.api.Test
 import readInput
 import kotlin.test.assertEquals
 import kotlin.time.Clock
-import kotlin.time.Instant
 
 typealias Input = List<String>
 
@@ -13,11 +12,11 @@ fun parse(raw: String): Input {
     return raw.lines().filter(String::isNotEmpty)
 }
 
-fun part1(input: Input): Int {
+fun part1(input: Input, debug: Boolean = false): Int {
     return 0
 }
 
-fun part2(input: Input): Int {
+fun part2(input: Input, debug: Boolean = false): Int {
     return 0
 }
 
@@ -43,7 +42,7 @@ class Tests {
     inner class Part1 {
         @Test
         fun testPart1() {
-            assertEquals(-1, part1(parsed))
+            assertEquals(-1, part1(parsed, debug = true))
         }
     }
 
@@ -51,7 +50,7 @@ class Tests {
     inner class Part2 {
         @Test
         fun testPart2() {
-            assertEquals(-1, part2(parsed))
+            assertEquals(-1, part2(parsed, debug = true))
         }
 
     }
